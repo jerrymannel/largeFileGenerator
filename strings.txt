@@ -1,0 +1,3 @@
+{"username":"alice","age":18,"phone":"123123123","address":{"line1":"asd","street":"street","pin":123123}}
+users,<user><name>"Alice"</name><age>18</age><phone>"123123123123"</phone><address><line1>"asd"</line1><street>"street"</street><pin>123123</pin></address></user>
+Alice,18,123123123,asd,street,town,state,country,123123
