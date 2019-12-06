@@ -6,6 +6,8 @@ Sample utility to generate large data files.
 
 # Usage
 
+> the executable and the string.txt file must be at the same location.
+
 ```sh
 ./largeFileGenerator <opFileName> <type> <size>
 Parameters:
