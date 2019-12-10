@@ -42,13 +42,28 @@ func generate(fileType, outputFileName, data string, size int) {
 		check(err)
 		w.Flush()
 	}
+	if fileType == "json" {
+		lines = lines - 1
+		_, err = w.WriteString("[")
+		check(err)
+		w.Flush()
+	}
 	for i := 0; i < lines; i++ {
-		_, err = w.WriteString(data + "\n")
+		line := data
+		if fileType == "json" {
+			line = line + ","
+		}
+		_, err = w.WriteString(line + "\n")
 		check(err)
 		w.Flush()
 	}
 	if fileType == "xml" {
 		_, err = w.WriteString("<" + rootTag + "/>")
+		check(err)
+		w.Flush()
+	}
+	if fileType == "json" {
+		_, err = w.WriteString(data + "]")
 		check(err)
 		w.Flush()
 	}
