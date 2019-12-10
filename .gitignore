@@ -10,3 +10,8 @@
 
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
+
+
+largeFileGenerator_darvin
+largeFileGenerator_win
+largeFileGenerator_x86
